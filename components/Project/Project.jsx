@@ -1,6 +1,6 @@
 import Image from 'next/legacy/image';
 
-// ?: Project
+
 function Project({ image }) {
     return (
         <>
