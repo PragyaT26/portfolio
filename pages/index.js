@@ -200,7 +200,7 @@ export default function Home() {
             <h3 className="text-3xl py-1 dark:text-white ">Projects</h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
               Since the beginning of my journey as a freelance designer and
-              developer, I've done remote work for
+              developer
               <span className="text-teal-500"> agencies </span>
               consulted for <span className="text-teal-500">startups </span>
               and collaborated with talented people to create digital products
