@@ -5,10 +5,6 @@ import { SiArtstation } from "react-icons/si";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { useState } from "react";
 import deved from "../public/dev-ed-wave.png";
-import code from "../public/code.png";
-import design from "../public/design.png";
-import consulting from "../public/consulting.png";
-import Certificate from "@/components/Certificate/Certificate";
 import Project from "@/components/Project/Project";
 import certificates from '/assets/certificates/certificates.json';
 import first from '@/assets/certificates/images/first.jpeg';
@@ -17,6 +13,25 @@ import third from '@/assets/certificates/images/third.jpeg';
 import fourth from '@/assets/certificates/images/fourth.jpeg';
 import fifth from '@/assets/certificates/images/fifth.jpeg';
 import sixth from '@/assets/certificates/images/sixth.jpeg';
+
+import airplane from '@/assets/projects/images/airplane.jpg'
+import bedroom from '@/assets/projects/images/bedroom.jpg'
+import castleGate from '@/assets/projects/images/castleGate.jpg'
+import graveyard from '@/assets/projects/images/graveyard.jpg'
+import guns from '@/assets/projects/images/guns.jpg'
+import guns2 from '@/assets/projects/images/guns2.jpg'
+import hall from '@/assets/projects/images/hall.jpg'
+import hammers from '@/assets/projects/images/hammers.jpg'
+import hauntedHouse from '@/assets/projects/images/hauntedHouse.jpg'
+import helicopter from '@/assets/projects/images/helicopter.jpg'
+import house from '@/assets/projects/images/house.jpg'
+import livingRoom from '@/assets/projects/images/livingRoom.jpg'
+import office from '@/assets/projects/images/office.jpg'
+import swords from '@/assets/projects/images/swords.jpg'
+import weapons from '@/assets/projects/images/weapons.jpg'
+import witchRoom from '@/assets/projects/images/witchRoom.jpg'
+
+
 
 
 export default function Home() {
@@ -188,7 +203,7 @@ export default function Home() {
               developer, I've done remote work for
               <span className="text-teal-500"> agencies </span>
               consulted for <span className="text-teal-500">startups </span>
-              and collaborated with talanted people to create digital products
+              and collaborated with talented people to create digital products
               for both business and consumer use.
             </p>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
@@ -199,12 +214,22 @@ export default function Home() {
 
           {/* //?: Projects */}
           <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
-            <Project image={adobe} />
-            <Project image={web2} />
-            <Project image={web3} />
-            <Project image={web4} />
-            <Project image={web5} />
-            <Project image={web6} />
+            <Project image={airplane} />
+            <Project image={bedroom} />
+            <Project image={castleGate} />
+            <Project image={graveyard} />
+            <Project image={guns} />
+            <Project image={guns2} />
+            <Project image={hall} />
+            <Project image={hammers} />
+            <Project image={hauntedHouse} />
+            <Project image={helicopter} />
+            <Project image={house} />
+            <Project image={livingRoom} />
+            <Project image={office} />
+            <Project image={swords} />
+            <Project image={weapons} />
+            <Project image={witchRoom} />
           </div>
 
         </section>
