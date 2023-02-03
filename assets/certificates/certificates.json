@@ -1,0 +1,44 @@
+[
+    {
+        "id": "1",
+        "name": "Foundations of User Experience (UX) Design",
+        "duration": "December 10, 2022 - December 15, 2022",
+        "link": "https://coursera.org/share/250ed3b8e2cdf1708ee32d9ce90a91d6",
+        "image": "first"
+    },
+    {
+        "id": "2",
+        "name": "Create High-Fidelity Designs and Prototypes in Figma",
+        "duration": "December 10, 2022 - January 29, 2023",
+        "link": "https://coursera.org/share/e3242ce6fb25f5cbaa6211c122860df4",
+        "image": "second"
+    },
+    {
+        "id": "3",
+        "name": "Conduct UX Research and Test Early Concepts",
+        "duration": "December 10, 2022 - January 29, 2023",
+        "link": "https://coursera.org/share/385349f899040a759bf8e7dd14d21114",
+        "image": "third"
+    },
+    {
+        "id": "4",
+        "name": "Build Wireframes and Low-Fidelity Prototypes",
+        "duration": "December 10, 2022 - January 11, 2023",
+        "link": "https://coursera.org/share/f11f79ce82ea29845e28239ad27e0bb7",
+        "image": "fourth"
+    },
+    {
+        "id": "5",
+        "name": "Start the UX Design Process: Empathize, Define, and Ideate",
+        "duration": "December 10, 2022 - January 18, 2023",
+        "link": "https://coursera.org/share/b45e2715a2dfe401af2439f394eeccbb",
+        "image": "fifth"
+    },
+    {
+        "id": "6",
+        "name": "Responsive Web Design in Adobe XD",
+        "duration": "December 10, 2022 - January 29, 2023",
+        "link": "https://coursera.org/share/7937bda4296238a75562722294ec0fc5",
+        "image": "sixth"
+    }
+]

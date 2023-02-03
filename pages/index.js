@@ -1,22 +1,23 @@
+import Image from "next/legacy/image";
 import Head from "next/head";
-import {
-  AiFillTwitterCircle,
-  AiFillLinkedin,
-  AiFillYoutube,
-} from "react-icons/ai";
+import { AiFillGithub, AiFillLinkedin, } from "react-icons/ai";
+import { SiArtstation } from "react-icons/si";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { useState } from "react";
 import deved from "../public/dev-ed-wave.png";
 import code from "../public/code.png";
 import design from "../public/design.png";
 import consulting from "../public/consulting.png";
-import Image from "next/image";
-import web1 from "../public/web1.png";
-import web2 from "../public/web2.png";
-import web3 from "../public/web3.png";
-import web4 from "../public/web4.png";
-import web5 from "../public/web5.png";
-import web6 from "../public/web6.png";
+import Certificate from "@/components/Certificate/Certificate";
+import Project from "@/components/Project/Project";
+import certificates from '/assets/certificates/certificates.json';
+import first from '@/assets/certificates/images/first.jpeg';
+import second from '@/assets/certificates/images/second.jpeg';
+import third from '@/assets/certificates/images/third.jpeg';
+import fourth from '@/assets/certificates/images/fourth.jpeg';
+import fifth from '@/assets/certificates/images/fifth.jpeg';
+import sixth from '@/assets/certificates/images/sixth.jpeg';
+
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -59,76 +60,129 @@ export default function Home() {
             <p className="text-md py-5 leading-8 text-gray-800 dark:text-gray-200 max-w-xl mx-auto md:text-xl">
               Description
             </p>
+
             <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400">
-              <AiFillTwitterCircle />
-              <AiFillLinkedin />
-              <AiFillYoutube />
+              <a href="https://pragya7.artstation.com/" target='_blank'>
+                <SiArtstation />
+              </a>
+              <a href="https://github.com/PragyaT26" target='_blank'>
+                <AiFillGithub />
+              </a>
+              <a href="https://www.linkedin.com/in/pragya-tiwari-031872206/" target='_blank'>
+                <AiFillLinkedin />
+              </a>
             </div>
+
             <div className="mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 relative overflow-hidden mt-20 md:h-96 md:w-96">
-              <Image src={deved} layout="fill" objectFit="cover" />
+              <Image src={deved} layout="fill" objectFit="cover" alt='dp' />
             </div>
           </div>
         </section>
         <section>
+
+          {/* //?: Skills and Certificates */}
           <div>
-            <h3 className="text-3xl py-1 dark:text-white ">Skills</h3>
+            <h3 className="text-3xl py-1 dark:text-white ">Skills and Certificates</h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
-I love to work on <span className="text-teal-500">Userinterface</span> of applications, therefore i have developed <span className="text-teal-500">Skills</span> as below 
+              I love to work on <span className="text-teal-500">User Interface</span> of applications, therefore i have developed <span className="text-teal-500">Skills</span> as below
             </p>
             {/* <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
               I offer from a wide range of services, including brand design,
               programming and teaching.
             </p> */}
           </div>
-          <div className="lg:flex gap-10">
-            <div className="text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white flex-1">
-              <Image src={design} width={100} height={100} />
-              <h3 className="text-lg font-medium pt-8 pb-2  ">
-                Beautiful Designs
-              </h3>
-              <p className="py-2">
-                Creating elegant designs suited for your needs following core
-                design theory.
-              </p>
-              <h4 className="py-4 text-teal-600">Design Tools I Use</h4>
-              <p className="text-gray-800 py-1">Photoshop</p>
-              <p className="text-gray-800 py-1">Illustrator</p>
-              <p className="text-gray-800 py-1">Figma</p>
-              <p className="text-gray-800 py-1">Indesign</p>
-            </div>
-            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
-              <Image src={code} width={100} height={100} />
-              <h3 className="text-lg font-medium pt-8 pb-2 ">
-                Code your dream project
-              </h3>
-              <p className="py-2">
-                Do you have an idea for your next great website? Let's make it a
-                reality.
-              </p>
-              <h4 className="py-4 text-teal-600">Design Tools I Use</h4>
-              <p className="text-gray-800 py-1">Photoshop</p>
-              <p className="text-gray-800 py-1">Illustrator</p>
-              <p className="text-gray-800 py-1">Figma</p>
-              <p className="text-gray-800 py-1">Indesign</p>
-            </div>
-            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
-              <Image src={consulting} width={100} height={100} />
-              <h3 className="text-lg font-medium pt-8 pb-2 ">Consulting</h3>
-              <p className="py-2">
-                Are you interested in feedback for your current project? I can
-                give you tips and tricks to level it up.
-              </p>
-              <h4 className="py-4 text-teal-600">Design Tools I Use</h4>
-              <p className="text-gray-800 py-1">Photoshop</p>
-              <p className="text-gray-800 py-1">Illustrator</p>
-              <p className="text-gray-800 py-1">Figma</p>
-              <p className="text-gray-800 py-1">Indesign</p>
-            </div>
+          <div className="lg:flex-col  gap-10">
+
+            <ul className='lg:flex gap-10'>
+
+              <li key={certificates[0]}>
+                <div className="flex flex-col shadow-lg p-2 rounded-xl my-10 dark:shadow-lg dark:shadow-slate-500 dark:bg-white flex-1">
+                  <Image
+                    width={"1200"}
+                    height={"700"}
+                    src={first}
+                  />
+                  <h3 className='text-center text-xl'>{certificates[0].name}</h3>
+                  <h3 className='text-center text-lg text-green-800'>{certificates[0].duration}</h3>
+                  <h3 className='text-center'><a className='underline text-lg decoration-blue-600 text-blue-500' href={certificates[0].link} target='_blank'>Link</a></h3>
+                </div>
+              </li>
+
+              <li key={certificates[0]}>
+                <div className="flex flex-col shadow-lg p-2 rounded-xl my-10 dark:shadow-lg dark:shadow-slate-500 dark:bg-white flex-1">
+                  <Image
+                    width={"1200"}
+                    height={"700"}
+                    src={second}
+                  />
+                  <h3 className='text-center text-xl'>{certificates[1].name}</h3>
+                  <h3 className='text-center text-lg text-green-800'>{certificates[1].duration}</h3>
+                  <h3 className='text-center'><a className='underline text-lg decoration-blue-600 text-blue-500' href={certificates[1].link} target='_blank'>Link</a></h3>
+                </div>
+              </li>
+
+              <li key={certificates[2]}>
+                <div className="flex flex-col shadow-lg p-2 rounded-xl my-10 dark:shadow-lg dark:shadow-slate-500 dark:bg-white flex-1">
+                  <Image
+                    width={"1200"}
+                    height={"700"}
+                    src={third}
+                  />
+                  <h3 className='text-center text-xl'>{certificates[2].name}</h3>
+                  <h3 className='text-center text-lg text-green-800'>{certificates[2].duration}</h3>
+                  <h3 className='text-center'><a className='underline text-lg decoration-blue-600 text-blue-500' href={certificates[2].link} target='_blank'>Link</a></h3>
+                </div>
+              </li>
+
+            </ul>
+            <ul className='lg:flex gap-10'>
+
+              <li key={certificates[3]}>
+                <div className="flex flex-col shadow-lg p-2 rounded-xl my-10 dark:shadow-lg dark:shadow-slate-500 dark:bg-white flex-1">
+                  <Image
+                    width={"1200"}
+                    height={"700"}
+                    src={fourth}
+                  />
+                  <h3 className='text-center text-xl'>{certificates[3].name}</h3>
+                  <h3 className='text-center text-lg text-green-800'>{certificates[3].duration}</h3>
+                  <h3 className='text-center'><a className='underline text-lg decoration-blue-600 text-blue-500' href={certificates[3].link} target='_blank'>Link</a></h3>
+                </div>
+              </li>
+
+              <li key={certificates[4]}>
+                <div className="flex flex-col shadow-lg p-2 rounded-xl my-10 dark:shadow-lg dark:shadow-slate-500 dark:bg-white flex-1">
+                  <Image
+                    width={"1200"}
+                    height={"700"}
+                    src={fifth}
+                  />
+                  <h3 className='text-center text-xl'>{certificates[4].name}</h3>
+                  <h3 className='text-center text-lg text-green-800'>{certificates[4].duration}</h3>
+                  <h3 className='text-center'><a className='underline text-lg decoration-blue-600 text-blue-500' href={certificates[4].link} target='_blank'>Link</a></h3>
+                </div>
+              </li>
+
+              <li key={certificates[5]}>
+                <div className="flex flex-col shadow-lg p-2 rounded-xl my-10 dark:shadow-lg dark:shadow-slate-500 dark:bg-white flex-1">
+                  <Image
+                    width={"1200"}
+                    height={"700"}
+                    src={sixth}
+                  />
+                  <h3 className='text-center text-xl'>{certificates[5].name}</h3>
+                  <h3 className='text-center text-lg text-green-800'>{certificates[5].duration}</h3>
+                  <h3 className='text-center'><a className='underline text-lg decoration-blue-600 text-blue-500' href={certificates[5].link} target='_blank'>Link</a></h3>
+                </div>
+              </li>
+
+            </ul>
+
           </div>
         </section>
         <section className="py-10">
           <div>
-            <h3 className="text-3xl py-1 dark:text-white ">Portofolio</h3>
+            <h3 className="text-3xl py-1 dark:text-white ">Projects</h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
               Since the beginning of my journey as a freelance designer and
               developer, I've done remote work for
@@ -142,62 +196,17 @@ I love to work on <span className="text-teal-500">Userinterface</span> of applic
               programming and teaching.
             </p>
           </div>
+
+          {/* //?: Projects */}
           <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
-            <div className="basis-1/3 flex-1 ">
-              <Image
-                className="rounded-lg object-cover"
-                width={"100%"}
-                height={"100%"}
-                layout="responsive"
-                src={web1}
-              />
-            </div>
-            <div className="basis-1/3 flex-1">
-              <Image
-                className="rounded-lg object-cover"
-                width={"100%"}
-                height={"100%"}
-                layout="responsive"
-                src={web2}
-              />
-            </div>
-            <div className="basis-1/3 flex-1">
-              <Image
-                className="rounded-lg object-cover"
-                width={"100%"}
-                height={"100%"}
-                layout="responsive"
-                src={web3}
-              />
-            </div>
-            <div className="basis-1/3 flex-1">
-              <Image
-                className="rounded-lg object-cover"
-                width={"100%"}
-                height={"100%"}
-                layout="responsive"
-                src={web4}
-              />
-            </div>
-            <div className="basis-1/3 flex-1">
-              <Image
-                className="rounded-lg object-cover"
-                width={"100%"}
-                height={"100%"}
-                layout="responsive"
-                src={web5}
-              />
-            </div>
-            <div className="basis-1/3 flex-1">
-              <Image
-                className="rounded-lg object-cover"
-                width={"100%"}
-                height={"100%"}
-                layout="responsive"
-                src={web6}
-              />
-            </div>
+            <Project image={adobe} />
+            <Project image={web2} />
+            <Project image={web3} />
+            <Project image={web4} />
+            <Project image={web5} />
+            <Project image={web6} />
           </div>
+
         </section>
       </main>
     </div>
