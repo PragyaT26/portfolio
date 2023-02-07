@@ -4,7 +4,7 @@ import { AiFillGithub, AiFillLinkedin, } from "react-icons/ai";
 import { SiArtstation } from "react-icons/si";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { useState } from "react";
-import deved from "../public/dev-ed-wave.png";
+import dp from "@/assets/dp/image/dp.jpeg";
 import Project from "@/components/Project/Project";
 import certificates from '/assets/certificates/certificates.json';
 import first from '@/assets/certificates/images/first.jpeg';
@@ -30,6 +30,8 @@ import office from '@/assets/projects/images/office.jpg'
 import swords from '@/assets/projects/images/swords.jpg'
 import weapons from '@/assets/projects/images/weapons.jpg'
 import witchRoom from '@/assets/projects/images/witchRoom.jpg'
+import netflix from '@/assets/projects/images/netflix.jpg';
+import movieDatabase from '@/assets/projects/images/movieDatabase.jpg';
 
 
 
@@ -89,7 +91,7 @@ export default function Home() {
             </div>
 
             <div className="mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 relative overflow-hidden mt-20 md:h-96 md:w-96">
-              <Image src={deved} layout="fill" objectFit="cover" alt='dp' />
+              <Image src={dp} layout="fill" objectFit="cover" alt='dp' />
             </div>
           </div>
         </section>
@@ -214,6 +216,8 @@ export default function Home() {
 
           {/* //?: Projects */}
           <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
+            <Project image={netflix} />
+            <Project image={movieDatabase} />
             <Project image={airplane} />
             <Project image={bedroom} />
             <Project image={castleGate} />
