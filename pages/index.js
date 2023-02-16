@@ -4,6 +4,7 @@ import { AiFillGithub, AiFillLinkedin, } from "react-icons/ai";
 import { SiArtstation } from "react-icons/si";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { useState } from "react";
+import Skills from '@/components/Skills/Skills';
 import dp from "@/assets/dp/image/dp.jpeg";
 import Project from "@/components/Project/Project";
 import certificates from '/assets/certificates/certificates.json';
@@ -32,6 +33,9 @@ import weapons from '@/assets/projects/images/weapons.jpg'
 import witchRoom from '@/assets/projects/images/witchRoom.jpg'
 import netflix from '@/assets/projects/images/netflix.jpg';
 import movieDatabase from '@/assets/projects/images/movieDatabase.jpg';
+import foodApp from '@/assets/projects/images/foodApp.jpg';
+import gossips from '@/assets/projects/images/gossips.jpg';
+import sandwichApp from '@/assets/projects/images/sandwichApp.jpg';
 
 
 
@@ -97,16 +101,12 @@ export default function Home() {
         </section>
         <section>
 
-          {/* //?: Skills and Certificates */}
+          <Skills />
+
+          {/* //?: Certificates */}
           <div>
-            <h3 className="text-3xl py-1 dark:text-white ">Skills and Certificates</h3>
-            <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
-              I love to work on <span className="text-teal-500">User Interface</span> of applications, therefore i have developed <span className="text-teal-500">Skills</span> as below
-            </p>
-            {/* <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
-              I offer from a wide range of services, including brand design,
-              programming and teaching.
-            </p> */}
+            <h3 className="text-5xl underline decoration-blue-500 py-1 dark:text-white text-center bold">Certificates</h3>
+
           </div>
           <div className="lg:flex-col  gap-10">
 
@@ -198,9 +198,11 @@ export default function Home() {
           </div>
         </section>
         <section className="py-10">
+          {/* //?: Projects */}
+
           <div>
-            <h3 className="text-3xl py-1 dark:text-white ">Projects</h3>
-            <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
+            <h3 className="text-5xl underline decoration-blue-500 py-1 dark:text-white ">Projects</h3>
+            {/* <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
               Since the beginning of my journey as a freelance designer and
               developer
               <span className="text-teal-500"> agencies </span>
@@ -211,29 +213,31 @@ export default function Home() {
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
               I offer from a wide range of services, including brand design,
               programming and teaching.
-            </p>
+            </p> */}
           </div>
 
-          {/* //?: Projects */}
           <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
-            <Project image={netflix} />
-            <Project image={movieDatabase} />
-            <Project image={airplane} />
-            <Project image={bedroom} />
-            <Project image={castleGate} />
-            <Project image={graveyard} />
-            <Project image={guns} />
-            <Project image={guns2} />
-            <Project image={hall} />
-            <Project image={hammers} />
-            <Project image={hauntedHouse} />
-            <Project image={helicopter} />
-            <Project image={house} />
-            <Project image={livingRoom} />
-            <Project image={office} />
-            <Project image={swords} />
-            <Project image={weapons} />
-            <Project image={witchRoom} />
+            <Project link='' size={'50%'} image={netflix} />
+            <Project link='' size={'100%'} image={movieDatabase} />
+            <Project link='' size={'100%'} image={airplane} />
+            <Project link='' size={'100%'} image={bedroom} />
+            <Project link='' size={'100%'} image={castleGate} />
+            <Project link='' size={'100%'} image={graveyard} />
+            <Project link='' size={'100%'} image={guns} />
+            <Project link='' size={'100%'} image={guns2} />
+            <Project link='' size={'100%'} image={hall} />
+            <Project link='' size={'100%'} image={hammers} />
+            <Project link='' size={'100%'} image={hauntedHouse} />
+            <Project link='' size={'100%'} image={helicopter} />
+            <Project link='' size={'100%'} image={house} />
+            <Project link='' size={'100%'} image={livingRoom} />
+            <Project link='' size={'100%'} image={office} />
+            <Project link='' size={'100%'} image={swords} />
+            <Project link='' size={'100%'} image={weapons} />
+            <Project link='' size={'100%'} image={witchRoom} />
+            <Project link='https://www.figma.com/file/1nmV3QG5bRjG7gIaijjoCO/Food-App?node-id=0%3A1' size={'10%'} image={foodApp} />
+            <Project link='https://www.figma.com/file/gtrpeMRPXbAy7LR387Pyyo/gossips?node-id=0%3A1' size={'10%'} image={sandwichApp} />
+            <Project link='https://www.figma.com/file/etTXH3E7x4EPLpYTtKvuaP/sandwich-app-1?node-id=0%3A1' size={10} image={gossips} />
           </div>
 
         </section>

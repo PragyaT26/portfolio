@@ -1,18 +1,20 @@
 import Image from 'next/legacy/image';
 
 
-function Project({ image }) {
+function Project({ image, size, link }) {
     return (
         <>
             <div className="basis-1/3 flex-1 ">
-                <Image
-                    className="rounded-lg object-cover "
-                    width={"100%"}
-                    height={"100%"}
-                    layout="responsive"
-                    src={image}
-                    title="mammals"
-                />
+                <a href={link} target='_blank'>
+                    <Image
+                        className="rounded-lg object-cover "
+                        width={size}
+                        height={size}
+                        layout="responsive"
+                        src={image}
+                        title="mammals"
+                    />
+                </a>
             </div>
         </>
     );
